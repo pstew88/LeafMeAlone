@@ -1,0 +1,13 @@
+package com.leaf.entities;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Subscription {
+private int id;
+private int numberOfPlants;
+private String name;
+private String climate;
+private String water;
+private boolean flowering;
+}

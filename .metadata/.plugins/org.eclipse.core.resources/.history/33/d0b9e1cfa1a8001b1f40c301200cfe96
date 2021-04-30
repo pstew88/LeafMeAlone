@@ -1,0 +1,6 @@
+package com.leaf.entities;
+
+private class Address {
+private int id;
+private String street; 
+}

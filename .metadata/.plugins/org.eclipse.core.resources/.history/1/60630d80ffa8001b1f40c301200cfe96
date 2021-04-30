@@ -1,0 +1,9 @@
+package com.leaf.entities;
+
+public class Subscription {
+private int id;
+private String street;
+private String city;
+private char stateAbbreviation;
+private String zipCode;
+}
