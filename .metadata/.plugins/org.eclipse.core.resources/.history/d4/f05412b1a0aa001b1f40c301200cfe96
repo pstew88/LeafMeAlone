@@ -1,0 +1,10 @@
+package com.leaf.entities;
+
+import java.time.LocalDateTime;
+
+public class Shipment {
+
+	private int id;
+	private int numberOfPlants;
+	private LocalDateTime shipmentDate;
+}

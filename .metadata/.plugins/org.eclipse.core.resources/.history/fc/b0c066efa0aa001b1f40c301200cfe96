@@ -1,0 +1,12 @@
+package com.leaf.entities;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Subscription {
+
+	private int id;
+	private String name;
+	private boolean flowering;
+
+}

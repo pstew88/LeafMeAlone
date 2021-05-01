@@ -1,0 +1,14 @@
+package com.leaf.entities;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Address {
+
+	private int id;
+	private String street;
+	private String city;
+	private char stateAbbreviation;
+	private String zipCode;
+	
+}
