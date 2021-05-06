@@ -2,6 +2,7 @@ package com.leaf.entities;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -51,4 +52,12 @@ public class UserTest {
 		assertEquals("drfuzz@gmail.com", user.getEmail());	
 	}
 
+	@Test
+	void test_user_to_address() {
+		assertNotNull(user);
+		assertNotNull(user.getAddress());
+		assertNotNull(user.getSubscription());
+		assertTrue(user.getAddress().getId()==1);
+		assertTrue(user.getSubscription().getId()==1);
+	}
 }

@@ -13,12 +13,11 @@ public class Address {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	
 	private String street;
 	private String city;
 	
 	@Column(name = "state_abbreviation")
-	private char stateAbbreviation;
+	private String stateAbbreviation;
 	
 	@Column(name = "zip_code")
 	private String zipCode;
@@ -47,11 +46,11 @@ public class Address {
 		this.city = city;
 	}
 
-	public char getStateAbbreviation() {
+	public String getStateAbbreviation() {
 		return stateAbbreviation;
 	}
 
-	public void setStateAbbreviation(char stateAbbreviation) {
+	public void setStateAbbreviation(String stateAbbreviation) {
 		this.stateAbbreviation = stateAbbreviation;
 	}
 
@@ -63,15 +62,12 @@ public class Address {
 		this.zipCode = zipCode;
 	}
 
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((city == null) ? 0 : city.hashCode());
 		result = prime * result + id;
-		result = prime * result + stateAbbreviation;
-		result = prime * result + ((street == null) ? 0 : street.hashCode());
-		result = prime * result + ((zipCode == null) ? 0 : zipCode.hashCode());
 		return result;
 	}
 
@@ -84,24 +80,7 @@ public class Address {
 		if (getClass() != obj.getClass())
 			return false;
 		Address other = (Address) obj;
-		if (city == null) {
-			if (other.city != null)
-				return false;
-		} else if (!city.equals(other.city))
-			return false;
 		if (id != other.id)
-			return false;
-		if (stateAbbreviation != other.stateAbbreviation)
-			return false;
-		if (street == null) {
-			if (other.street != null)
-				return false;
-		} else if (!street.equals(other.street))
-			return false;
-		if (zipCode == null) {
-			if (other.zipCode != null)
-				return false;
-		} else if (!zipCode.equals(other.zipCode))
 			return false;
 		return true;
 	}
@@ -112,7 +91,7 @@ public class Address {
 				+ stateAbbreviation + ", zipCode=" + zipCode + "]";
 	}
 
-	public Address(int id, String street, String city, char stateAbbreviation, String zipCode) {
+	public Address(int id, String street, String city, String stateAbbreviation, String zipCode) {
 		super();
 		this.id = id;
 		this.street = street;
